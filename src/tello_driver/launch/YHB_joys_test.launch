@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<launch>
+
+<!--This launch file is created by Haobo Yuan at Jan,2023 to test adding namespace and assigning device names-->
+<!--Desp: collect data from 2 simulators simutaneously-->
+
+  <node pkg="joy" type="joy_node" name="joy_node" ns="throttle" output="log">
+    <param name="dev" value="/dev/input/js0" />
+  </node>
+
+  <node pkg="joy" type="joy_node" name="joy_node" ns="yoke" output="log">
+    <param name="dev" value="/dev/input/js1" />
+  </node>
+
+  
+	<node pkg="joy" type="joy_node" name="joy_node" ns="rudder" output="log">
+    <param name="dev" value="/dev/input/js2" />
+  </node>
+
+</launch>

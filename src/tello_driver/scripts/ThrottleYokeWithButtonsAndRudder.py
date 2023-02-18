@@ -41,7 +41,7 @@ def callback2(data):
     # Use yoke axes to control horizontal locomation
 	print('##################')
 
-	twist.linear.x = data.axes[0]
+	twist.linear.x = -data.axes[0]
 	print('horizontal speed: %.2f'%(twist.linear.x)) # positive-50~100-right
 	pub1.publish(twist)
 	
